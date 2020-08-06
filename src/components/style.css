@@ -43,12 +43,12 @@ h1 {
 
 .shopping-list {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
 }
-.item {
+.list {
   background-color: #e64944;
   width: 45%;
   text-align: left;
@@ -57,8 +57,8 @@ h1 {
   cursor: pointer;
 }
 
-.item.purchased {
-  background-color: #d17d7c;
+.list.completed {
+  background-color: #4200dd;
   text-decoration: line-through;
 }
 form {
