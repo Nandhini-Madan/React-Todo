@@ -10,6 +10,7 @@ const TodoList=props=>{
                
                 <Todo key={list.id}
                       list={list}
+                      toggleList={props.toggleList}
                       />)
                
             )
