@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from "./components/TodoForm";
+import SearchForm from "./components/SearchForm"
 
 
 const toDoList = [
@@ -16,7 +17,7 @@ const toDoList = [
   },
   {
     task: 'Bake Cookies1',
-    id: 1528817184358,
+    id: 1528816184358,
     completed: false
   },
   {
@@ -63,13 +64,31 @@ class App extends React.Component {
 
   const newitem={
     task: item,
-    id: Date.now(),
+    id:2,
     completed: false
   }
   this.setState({
     toDoList:[...this.state.toDoList,newitem]
   });
   };
+
+  searchTask=item=>{
+    console.log("item",item);
+    this.setState({
+      toDoList:this.state.toDoList.map(
+        list=>{
+          if(item===list.task){
+            console.log("Sucess",list.task,list.id,list.completed);
+            return{
+            
+            task:list.task,id:list.id,completed:list.completed
+              
+            };
+          }
+     //   return list;
+        })
+    });
+  }
   
 render() {
   return (
@@ -78,7 +97,12 @@ render() {
       <h2>Welcome to your Todo App!</h2>
       </div>
       <TodoForm 
-        addTask={this.addTask}/>
+        addTask={this.addTask}
+       
+      />
+      <SearchForm 
+       searchTask={this.searchTask}
+       />
       <TodoList
         todolist={this.state.toDoList}
         toggleList={this.toggleList} 

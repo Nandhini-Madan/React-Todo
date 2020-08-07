@@ -1,45 +1,44 @@
 import React from "react";
 
-class TodoForm extends React.Component {
+class SearchForm extends React.Component {
     //Constructor with state
     constructor() {
         super();
         this.state = {
-            list: "",
            
+            search:""
         };
     }
-    handleChange=e=>{
-        console.log("hi");
+    
+    searchTask=e=>{
         this.setState({
-            list:e.target.value
+            search:e.target.value
         });
     };
-    
     submitList=e=>{
         e.preventDefault();
-        this.props.addTask(this.state.list);
-        
+      
+        this.props.searchTask(this.state.search);
         this.setState({
-            list:""
           
+            search:""
         });
     };
     render() {
         return (
             <div>
                 <form className="form" onSubmit={this.submitList}>
+                  
                     <input 
                     type="text"
-                    name="list"
-                    value={this.state.list}
-                    onChange={this.handleChange}
+                    name="search"
+                    value={this.state.search}
+                    onChange={this.searchTask}
                     />
-                    <button className="clear-btn">Add</button>
-                   
+                    <button className="clear-btn">search</button>
                 </form>
             </div>
         );
     }
 }
-export default TodoForm;
+export default SearchForm;

@@ -9,6 +9,9 @@ body {
 
 body {
   background-color: white;
+  background-image: url("../image/paul-green-5lRxNLHfZOY-unsplash.jpg");
+  
+  
 }
 
 h1,
@@ -31,6 +34,7 @@ span {
   max-width: 665px;
   margin: 0 auto;
   background-color: white;
+  background-image: url("../image/paul-green-5lRxNLHfZOY-unsplash.jpg");
 }
 
 .header {
