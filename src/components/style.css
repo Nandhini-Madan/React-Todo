@@ -8,7 +8,7 @@ body {
 }
 
 body {
-  background-color: #2d2d37;
+  background-color: white;
 }
 
 h1,
@@ -30,6 +30,7 @@ span {
   padding: 0 36px;
   max-width: 665px;
   margin: 0 auto;
+  background-color: white;
 }
 
 .header {
@@ -37,8 +38,9 @@ span {
   justify-content: space-between;
   align-items: center;
 }
-h1 {
+h2 {
   text-align: left;
+  color:rgb(209, 146, 50);
 }
 
 .shopping-list {
@@ -55,6 +57,15 @@ h1 {
   margin: 4px 0;
   padding-left: 8px;
   cursor: pointer;
+}
+.allign{
+  display: flex;
+  flex-direction: row;
+  padding-right: 10px;
+}
+
+.donebtn{
+  padding: 10px;
 }
 
 .list.completed {
