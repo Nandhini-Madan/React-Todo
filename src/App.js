@@ -81,7 +81,7 @@ class App extends React.Component {
             console.log("Sucess",list.task,list.id,list.completed);
             return{
             
-            task:list.task,id:list.id,completed:list.completed
+            ...list
               
             };
           }
